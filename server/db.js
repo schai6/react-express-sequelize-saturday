@@ -1,5 +1,5 @@
-const Sequelize = require('sequelize')
-const db = new Sequelize('postgres://localhost/puppybook')
+const Sequelize = require('sequelize');
+const db = new Sequelize('postgres://localhost:5432/puppybook');
 const Op = Sequelize.Op;
 
 const Puppy = db.define('puppy', {
@@ -15,7 +15,7 @@ const Puppy = db.define('puppy', {
         type: Sequelize.INTEGER,
         defaultValue: 1
     }
-})
+});
 
 Puppy.prototype.findPackmates = function() {
     return Puppy.findAll({
@@ -25,8 +25,8 @@ Puppy.prototype.findPackmates = function() {
                 [Op.ne]: this.id
             }
         }
-    })
-}
+    });
+};
 
 Puppy.findPopular = function() {
     return Puppy.findAll({
@@ -35,29 +35,29 @@ Puppy.findPopular = function() {
                 [Op.gte]: 5
             }
         }
-    })
-}
+    });
+};
 
 Puppy.beforeCreate(puppy => {
     puppy.name = puppy.name.trim().split(/\s+/).map(substr => {
-        return substr[0].toUpperCase() + substr.substring(1).toLowerCase()
+        return substr[0].toUpperCase() + substr.substring(1).toLowerCase();
     }).join(' ');
-})
+});
 
 const Owner = db.define('owner', {
     name: {
         type: Sequelize.STRING
     }
-})
+});
 
 Owner.beforeCreate(owner => {
     owner.name = owner.name.trim().split(/\s+/).map(substr => {
-        return substr[0].toUpperCase() + substr.substring(1).toLowerCase()
+        return substr[0].toUpperCase() + substr.substring(1).toLowerCase();
     }).join(' ');
-})
+});
 
 
-Puppy.belongsTo(Owner)
-Owner.hasMany(Puppy)
+Puppy.belongsTo(Owner);
+Owner.hasMany(Puppy);
 
-module.exports = db
+module.exports = db;

@@ -17,6 +17,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
 app.use('/api/puppies', require('./api/puppies'));
+app.use('/api/owners', require('./api/owners'));
 
 // If you want to add routes, they should go here!
 // You can either write them here, or organize them into

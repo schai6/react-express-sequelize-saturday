@@ -1,0 +1,81 @@
+/* feel free to modify this, or leave as is! */
+
+body {
+  font-family: arial,sans-serif;
+}
+
+#main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+@media screen and (max-width: 600px) {
+  #main {
+    flex-direction: column;
+  }
+}
+
+#new-puppy-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+#new-puppy-form > input,select {
+  margin: 1em 0;
+}
+
+#new-puppy-form label {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+#new-puppy-form > input {
+  padding: 0.5em;
+  border-radius: 5px;
+}
+
+#puppy-list {
+  list-style-type: none;
+  flex-grow: 1;
+}
+
+.puppy-profile {
+  display: flex;
+  flex-direction: column;
+}
+
+.puppy-profile > div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.puppy-profile img {
+  height: 100px;
+  width: 100px;
+  border-radius: 5px;
+}
+
+.btn {
+  outline: none;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+}
+
+.like {
+  background-color: #39CA49;
+  color: white;
+}
+
+.dislike {
+  background-color: #FC433E;
+  color: white;
+}
+
+.submit {
+  background-color: #1276D6;
+  color: white;
+}

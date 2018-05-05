@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width initial-scale=1.0'>
+    <title></title>
+    <link rel="stylesheet" href="/style.css" />
+    <script defer src="/bundle.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Everything below should be replaced by React -->
+      <div id="main">
+        <ul id="puppy-list">
+          <li class="puppy-profile">
+            <div>
+              <div>
+                <p>Name: Reggie</p>
+                <p>Owner: Raz</p>
+              </div>
+              <img src="http://images.shape.mdpcdn.com/sites/shape.com/files/styles/slide/public/puppy-2_0.jpg" />
+            </div>
+            <div class="puppy-likes">
+              <p>Number of Likes: 10</p>
+              <div>
+                <button class="like btn">Like</button>
+                <button class="dislike btn">Dislike</button>
+              </div>
+            </div>
+          </li>
+          <li class="puppy-profile">
+            <div>
+              <div>
+                <p>Name: Scooby</p>
+                <p>Owner: Sarah</p>
+              </div>
+              <img src="http://images.shape.mdpcdn.com/sites/shape.com/files/styles/slide/public/puppy-2_0.jpg" />
+            </div>
+            <div class="puppy-likes">
+              <p>Number of Likes: 10</p>
+              <div>
+                <button class="like btn">Like</button>
+                <button class="dislike btn">Dislike</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <form id="new-puppy-form">
+          <label>Enter the new puppy's name:</label>
+          <input name="puppyName" type="text" placeholder="New Puppy Name" />
+          <label>Select new puppy's owner:</label>
+          <select name="owner">
+            <option>Erin</option>
+            <option>Jamie</option>
+            <option>Kimberly</option>
+            <option>Raz</option>
+            <option>Sarah</option>
+          </select>
+          <button type="submit" class="btn submit">Submit</button>
+        </form>
+      </div>
+      <!-- Everything above should be replaced by React -->
+    </div>
+  </body>
+</html>

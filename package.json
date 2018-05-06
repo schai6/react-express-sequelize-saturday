@@ -17,7 +17,8 @@
   "scripts": {
     "start": "npm run start:server & npm run start:build",
     "start:server": "nodemon server/app.js --ignore public",
-    "start:build": "webpack -w"
+    "start:build": "webpack -w",
+    "seed": "node seed.js"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
